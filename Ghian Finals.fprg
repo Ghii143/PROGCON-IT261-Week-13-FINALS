@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ghian Finals"/>
+        <attribute name="authors" value="Ghian Carlo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-11 04:57:22 PM"/>
+        <attribute name="created" value="R2hpYW4gQ2FybG87TEFQVE9QLTg4VDFROEJBOzIwMjYtMTAtMTE7MDQ6MjE6MTEgUE07MzMwNA=="/>
+        <attribute name="edited" value="R2hpYW4gQ2FybG87TEFQVE9QLTg4VDFROEJBOzIwMjYtMTAtMTE7MDQ6NTc6MjIgUE07MTszNDIz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="playerName, ans1, ans2, ans3" type="String" array="False" size=""/>
+            <declare name="score" type="Integer" array="False" size=""/>
+            <declare name="percentage" type="Real" array="False" size=""/>
+            <output expression="&quot;Hello! Welcome to the Trivia Game!&quot;" newline="True"/>
+            <output expression="&quot;Enter your name to Begin:&quot;" newline="True"/>
+            <input variable="playerName"/>
+            <output expression="&quot;Hello, &quot; &amp; playerName &amp; &quot;! Let's test your knowledge.&quot;" newline="True"/>
+            <output expression="&quot;Question 1: What is the extension of Python source files?&quot;" newline="True"/>
+            <output expression="&quot;  A) .pt&quot;" newline="True"/>
+            <output expression="&quot;  B) .pt&quot;" newline="True"/>
+            <output expression="&quot;  C) .pt&quot;" newline="True"/>
+            <output expression="&quot;  D) .pt&quot;" newline="True"/>
+            <output expression="&quot;Your answer (A/B/C/D): &quot;" newline="True"/>
+            <input variable="ans1"/>
+            <output expression="&quot;Question 2: Which keyword is used to define a function in Python?&quot;" newline="True"/>
+            <output expression="&quot;  A) func&quot;" newline="True"/>
+            <output expression="&quot;  B) define&quot;" newline="True"/>
+            <output expression="&quot;  C) def&quot;" newline="True"/>
+            <output expression="&quot;  D) function&quot;" newline="True"/>
+            <output expression="&quot;Your answer (A/B/C/D): &quot;" newline="True"/>
+            <input variable="ans2"/>
+            <output expression="&quot;Question 3: Which data type is immutable in Python?&quot;" newline="True"/>
+            <output expression="&quot;  A) List&quot;" newline="True"/>
+            <output expression="&quot;  B) Dictionary&quot;" newline="True"/>
+            <output expression="&quot;  C) Set&quot;" newline="True"/>
+            <output expression="&quot;  D) Tuple&quot;" newline="True"/>
+            <output expression="&quot;Your answer (A/B/C/D): &quot;" newline="True"/>
+            <input variable="ans3"/>
+            <assign variable="score" expression="0"/>
+            <if expression="ans1 == &quot;B&quot;">
+                <then>
+                    <assign variable="score" expression="score + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ans2 == &quot;C&quot;">
+                <then>
+                    <assign variable="score" expression="score + 1"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ans3 == &quot;D&quot;">
+                <then>
+                    <assign variable="score" expression="score + 1"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;FINAL RESULT&quot;" newline="True"/>
+            <output expression="&quot;Player: &quot; &amp; playerName" newline="True"/>
+            <output expression="&quot;You scored &quot; &amp; score &amp; &quot; out of 3.&quot;" newline="True"/>
+            <assign variable="percentage" expression="(score/3.0) * 100"/>
+            <if expression="percentage == 100">
+                <then>
+                    <output expression="&quot;Rating: Excellent!...&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="percentage = 50">
+                        <then>
+                            <output expression="&quot;Rating: Good job! Well played! &#55357;&#56397;&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Rating: Keep practicing! You'll get them next time. &#55357;&#56490;&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
